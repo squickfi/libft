@@ -60,4 +60,15 @@ I don't find it really useful, but the subject required them.
  - ft_lstnew
  - ft_lstsize
 ### Added personally
- - [get_next_line(int fd, char \*\*line)](https://github.com/squickfi/libft/blob/master/srcs/get_next_line.c) - reads from an opened file descriptor and puts a line to a recieved pointer each time the function is called while there is something to read. It also uses functions from [get_next_line_utils](https://github.com/squickfi/libft/blob/master/srcs/get_next_line_utils.c)
+ - int `get_next_line`(int fd, char \*\*line) - reads from an opened file descriptor and puts a line to a recieved pointer each time the function is called while there is something to read.
+ - int `ft_isspace`(int c) - standart
+ - void `ft_swap_char`(char \*a, char \*b) - swaps two char variables.
+ - void `ft_swap_int`(int \*a, int \*b) - swaps two int variables.
+ - void `ft_swap_string`(char \*\*a, char \*\*b) - swaps two char \* variables.
+ - int `ft_is_int`(char \*str) - checks a string for containing an int value.
+ - int `ft_is_unsigned_int`(char \*str) - checks a string for containing an unsigned int value.
+ - char \*\*`ft_free_char_array_and_return_null`(char \*\*arr) - frees allocated memory and returns a NULL pointer type of char.
+ - int \*\*`ft_free_int_array_and_return_null`(int \*\*arr) - frees allocated memory and returns a NULL pointer type of int.
+
+
+

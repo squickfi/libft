@@ -2,12 +2,12 @@ NAME = libft.a
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -I ./includes
-HEAD = libft.h
+HEAD = libft.h get_next_line.h 
 HEADERS = $(addprefix ./includes/, $(HEAD))
 AR = ar -rcs
 RM = rm -f
 
-FILES = ft_memset.c\
+LIBFT_SRCS = ft_memset.c\
 		ft_bzero.c\
 		ft_memcpy.c\
 		ft_memccpy.c\
@@ -49,11 +49,19 @@ FILES = ft_memset.c\
 		ft_lstdelone.c\
 		ft_lstclear.c\
 		ft_lstiter.c\
-		ft_lstmap.c\
-		get_next_line.c\
+		ft_lstmap.c
+
+GNL_SRCS = get_next_line.c\
 		get_next_line_utils.c
 
-OBJS = $(addprefix ./srcs/, $(FILES:%.c=%.o))
+ADDITIONAL_SRCS = ft_isspace.c\
+		ft_swap_vars.c\
+		ft_is_int.c\
+		ft_free_array.c
+
+OBJS = $(addprefix ./srcs/libft/, $(LIBFT_SRCS:%.c=%.o))\
+		$(addprefix ./srcs/gnl/, $(GNL_SRCS:%.c=%.o))\
+		$(addprefix ./srcs/additional/, $(ADDITIONAL_SRCS:%.c=%.o))
 
 %.o: %.c $(HEADERS)
 	$(CC) $(CFLAGS) -c $< -o $@

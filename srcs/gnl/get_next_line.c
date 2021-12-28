@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "get_next_line.h"
 
 int	first_check(int fd, char **line, char **buf, ssize_t *ret)
 {
@@ -38,7 +38,7 @@ int	if_there_is_n_in_remain(char **remain, char **line, char **buf)
 	char	*temp;
 	char	*temp_for_n;
 
-	temp_for_n = ft_strrchr(*remain, '\n') + 1;
+	temp_for_n = ft_gnl_strrchr(*remain, '\n') + 1;
 	if (ft_strdup_till_c(line, remain, '\n', buf))
 	{
 		free (*remain);

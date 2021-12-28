@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "get_next_line.h"
 
 int	util_foo(ssize_t ret, char **buf, char **remain, int var)
 {

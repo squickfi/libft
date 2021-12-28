@@ -58,22 +58,15 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-//get_next_line
+//additional functions
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 64
-# endif
-
-int		util_foo(ssize_t ret, char **buf, char **remain, int var);
-int		where_is_c(char *s, char c);
-char	*ft_gnl_strrchr(char *s, int c);
-int		ft_strdup_till_c(char **s1, char **s2, char c, char **buf);
-int		ft_gnl_strjoin(char **s1, char **s2);
-
-int		first_check(int fd, char **line, char **buf, ssize_t *ret);
-int		first_call(char **remain, char **buf);
-int		if_there_is_n_in_remain(char **remain, char **line, char **buf);
-int		foo_for_return(char **remain, char **line, ssize_t ret, char **buf);
-int		get_next_line(int fd, char **line);
+int		ft_isspace(int c);
+void	ft_swap_char(char *a, char *b);
+void	ft_swap_int(int *a, int *b);
+void	ft_swap_string(char **a, char **b);
+int		ft_is_int(char *str);
+int		ft_is_unsigned_int(char *str);
+char	**ft_free_char_array_and_return_null(char **arr);
+int		**ft_free_int_array_and_return_null(int **arr, int size);
 
 #endif
